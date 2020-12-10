@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body style="padding-top: 10px;">
+    <center>
+    <img src="https://www.leukvoorkids.nl/wp-content/uploads/sinterklaas-cat.jpg" height="100px"/><br />
+    <input id='input' placeholder='Vul hier de code in'>
+    <button onclick="outputFunction()">Klik</button>
+    <p id="textOutput"></p>
+    <p id="pogingen"></p>
+    </center>
+</body>
+<script>
+    var output;
+    var pogingen = 4;
+    function outputFunction() {
+        output = document.getElementById('input').value;
+        if (output == "69420") {
+            document.getElementById("textOutput").innerHTML = "Correct! Ga naar de tuin.";
+        } else {
+            document.getElementById("textOutput").innerHTML = "Haha fout sukkel probeer het opnieuw";
+            pogingen -= 1;
+            document.getElementById("pogingen").innerHTML = "je hebt nog "+ pogingen+" pogingen"
+        }
+    }
+</script>
+</html>
